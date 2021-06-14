@@ -18,8 +18,7 @@
         "qoraiche/laravel-mail-editor": "^3.2",
         "spatie/laravel-medialibrary": "^9.0.0",
         "spatie/laravel-model-status": "^1.10",
-        "willvincent/laravel-rateable": "^2.3",
-        "yajra/laravel-oci8": "8"
+        "willvincent/laravel-rateable": "^2.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

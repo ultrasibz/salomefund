@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::middleware('auth')->group(function (){
-    Route::get('/', \App\Http\Livewire\Request\PpeRequest::class)->name('home');
+    Route::get('/', \App\Http\Livewire\Groups\GroupIndex::class)->name('home');
     Route::get('/group', \App\Http\Livewire\Groups\GroupIndex::class)->name('group.index');
     Route::get('/group/{group}/show', \App\Http\Livewire\Groups\GroupShow::class)->name('group.show');
     Route::get('/group/{group}/user/add', \App\Http\Livewire\Groups\GroupUserAdd::class)->name('group.user.add');

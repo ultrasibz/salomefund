@@ -78,7 +78,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     @endif
 
                     <div class="mb-20">
-                        <h3>Welcome to ZESCO PPE</h3>
+                        <h3>Welcome to {{env('APP_NAME')}}</h3>
                         <p class="opacity-60 font-weight-bold">Enter your details to login to your account:</p>
                     </div>
                     <form class="form" method="post" action="{{route('login')}}" >

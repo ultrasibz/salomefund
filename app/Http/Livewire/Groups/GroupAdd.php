@@ -12,8 +12,8 @@ class GroupAdd extends Component
     protected $rules = [
         'group.name' => 'required|string',
 
-        'group.start_on' => 'required',
-        'group.end_on' => 'required',
+        'group.start_on' => 'required|numeric',
+        'group.end_on' => 'required|numeric',
     ];
 
     public function mount(){

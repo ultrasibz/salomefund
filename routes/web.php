@@ -23,6 +23,8 @@ Route::middleware('auth')->group(function (){
     Route::get('/group/{group}/user/add', \App\Http\Livewire\Groups\GroupUserAdd::class)->name('group.user.add');
     Route::get('/group/{group}/user/{user}/deposits', \App\Http\Livewire\Groups\GroupUserDeposits::class)->name('group.user.deposits');
     Route::get('/group/{group}/user/{user}/loans', \App\Http\Livewire\Groups\GroupUserLoans::class)->name('group.user.loans');
-    Route::get('/user/{user}/show', \App\Http\Livewire\User\UserShow::class)->name('user.show');
+    Route::get('/user/{user}/show', \App\Http\Livewire\Profile\ProfileEdit::class)->name('user.show');
+    Route::get('/user/{user}/documents', \App\Http\Livewire\Profile\ProfileDocuments::class)->name('user.documents');
+
 });
 

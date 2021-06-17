@@ -48,10 +48,10 @@ class TestCommand extends Command
 //        $user->save();
 //        dd($user);
 //
-        foreach (Deposit::all() as $request){
+        foreach (User::all() as $user){
 //            $request->erm_id = User::where('positions_id', env('ERM_POSITION_ID'))->first()->id;
 //            $request->save();
-            $request->setStatus('approved', 'approved');
+            $user->addMediaFromUrl(asset('media/users/blank.png'))->toMediaCollection('avatar');
         }
     }
 }

@@ -36,7 +36,8 @@ class GroupUserDepositsAdd extends Component
     {
         $this->validate();
         $this->deposit->group_id = $this->group->id;
-        $this->deposit->setStatus('approved');
         $this->user->deposits()->save($this->deposit);
+
+        $this->deposit->setStatus('approved');
     }
 }

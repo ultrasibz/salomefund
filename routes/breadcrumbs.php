@@ -33,4 +33,7 @@ Breadcrumbs::for('user.show', function ($trail, \App\Models\User $user) {
     $trail->push($user->fullname, route('user.show',$user));
 });
 
+Breadcrumbs::for('user.documents', function ($trail, $user) {
+    $trail->push('Title Here', route('user.documents',$user));
+});
 

@@ -11,9 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcef3ab-7599-49d9-abc7-5f2ea8842bb8" name="Default Changelist" comment="v2">
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Profile/ProfileCard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Profile/ProfileEdit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Profile/ProfileIndex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/profile/profile-card.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/profile/profile-edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/profile/profile-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/salomefund.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/salomefund.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Groups/GroupUserAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Groups/GroupUserAdd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user/user-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user/user-show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/TestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/TestCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Groups/GroupUserDepositsAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Groups/GroupUserDepositsAdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/groups/group-user-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/groups/group-user-add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,14 +161,16 @@
       <path value="$PROJECT_DIR$/vendor/league/glide" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-model-status" />
       <path value="$PROJECT_DIR$/vendor/diglactic/laravel-breadcrumbs" />
-      <path value="$PROJECT_DIR$/vendor/yajra/laravel-oci8" />
-      <path value="$PROJECT_DIR$/vendor/yajra/laravel-pdo-via-oci8" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
       <path value="$PROJECT_DIR$/vendor/laravel/legacy-factories" />
       <path value="$PROJECT_DIR$/vendor/reecem/mocker" />
       <path value="$PROJECT_DIR$/vendor/qoraiche/laravel-mail-editor" />
       <path value="$PROJECT_DIR$/vendor/willvincent/laravel-rateable" />
       <path value="$PROJECT_DIR$/vendor/akaunting/laravel-money" />
+      <path value="$PROJECT_DIR$/vendor/league/iso3166" />
+      <path value="$PROJECT_DIR$/vendor/propaganistas/laravel-phone" />
+      <path value="$PROJECT_DIR$/vendor/giggsey/locale" />
+      <path value="$PROJECT_DIR$/vendor/giggsey/libphonenumber-for-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1shj8lzeTx4hsYJE26LkQPTutOk" />
@@ -166,17 +184,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/livewire" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\salomefund\resources\views\livewire" />
+      <recent name="C:\wamp64\www\salomefund\app\Http\Livewire" />
       <recent name="C:\wamp64\www\salomefund\resources\views" />
       <recent name="C:\wamp64\www\salomefund\app\Models" />
       <recent name="C:\wamp64\www\salomefund\app" />
-      <recent name="C:\wamp64\www\ppe\resources\sass\themes\layout" />
-      <recent name="C:\wamp64\www\ppe\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -209,7 +227,8 @@
       <workItem from="1623672250007" duration="32000" />
       <workItem from="1623672305072" duration="3802000" />
       <workItem from="1623678656431" duration="2605000" />
-      <workItem from="1623768591004" duration="2054000" />
+      <workItem from="1623768591004" duration="2695000" />
+      <workItem from="1623921732684" duration="5062000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1623676027476</created>
@@ -267,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623768949777</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="v2">
+      <created>1623770672925</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623770672925</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,9 +324,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="45" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.138.1920.1000/0.0.1920.1040@0.0.1920.1040" timestamp="1623675372075" />
-    <state x="552" y="218" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1622982442666">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623927597371">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.138.1920.1000/0.0.1920.1040@0.0.1920.1040" timestamp="1623927597371" />
     <state x="552" y="218" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-1920.244.1920.999@0.0.1536.824" timestamp="1622974864489" />
     <state x="552" y="218" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1622982442666" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621510671748" />
@@ -328,10 +355,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1621750378856" />
-    <state x="553" y="253" key="Vcs.Push.Dialog.v2" timestamp="1623768955575">
+    <state x="553" y="253" key="Vcs.Push.Dialog.v2" timestamp="1623770675031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="553" y="253" key="Vcs.Push.Dialog.v2/-1920.138.1920.1000/0.0.1920.1040@0.0.1920.1040" timestamp="1623768955575" />
+    <state x="553" y="253" key="Vcs.Push.Dialog.v2/-1920.138.1920.1000/0.0.1920.1040@0.0.1920.1040" timestamp="1623770675031" />
     <state x="371" y="24" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1621751340023">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

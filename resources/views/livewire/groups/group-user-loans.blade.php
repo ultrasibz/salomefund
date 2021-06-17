@@ -104,6 +104,6 @@
 <div class="modal fade" id="disburse-dd" data-backdrop="static" tabindex="-1" role="dialog"
      aria-labelledby="staticBackdrop" aria-hidden="true" xmlns:wire="http://www.w3.org/1999/xhtml">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <livewire:groups.group-user-disbursements-add :loan="$loan"/>
+        <livewire:groups.group-user-disbursements-add />
     </div>
 </div>

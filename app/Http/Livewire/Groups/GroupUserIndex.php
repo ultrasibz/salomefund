@@ -5,9 +5,13 @@ namespace App\Http\Livewire\Groups;
 use App\Models\Group;
 use App\Models\User;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class GroupUserIndex extends Component
 {
+    use WithFileUploads;
+    protected $paginationTheme = 'bootstrap';
+
     public Group $group;
     public $selecteduser;
 

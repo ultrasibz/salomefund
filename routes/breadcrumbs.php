@@ -39,6 +39,7 @@ Breadcrumbs::for('user.documents', function ($trail, $user) {
 });
 
 Breadcrumbs::for('user.banks', function ($trail, $user) {
+    $trail->parent('user.show',$user);
     $trail->push('Banks', route('user.banks',$user));
 });
 

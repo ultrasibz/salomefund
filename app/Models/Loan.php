@@ -10,7 +10,7 @@ use Spatie\ModelStatus\HasStatuses;
 
 class Loan extends Model
 {
-    use HasFactory,HasStatuses;
+    use HasFactory, HasStatuses;
 
     protected $appends = [
         'net_amount'
@@ -28,14 +28,19 @@ class Loan extends Model
         static::addGlobalScope(new LastestScope);
     }
 
-    public function type(){
+    public function type()
+    {
         return $this->belongsTo(Type::class);
     }
 
-    public function group(){
-        return $this->belongsTo(TeamworkTeam::class,'group_id');
+
+    public function getNetAmountAttribute()
+    {
+        return $this->amount + ($this->amount * $this->interest) / 100;
     }
 
-    public function getNetAmountAttribute(){
-        return $this->amount + ($this->amount * $this->interest)/100;
-    }}
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}

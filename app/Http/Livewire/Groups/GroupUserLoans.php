@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Groups;
 
+use App\Models\Deposit;
 use App\Models\Group;
 use App\Models\Loan;
 use App\Models\User;
@@ -12,6 +13,9 @@ class GroupUserLoans extends Component
     public Group $group;
     public User $user;
     public Loan $loan;
+
+    protected $listeners = ['update' => 'render'];
+
 
     public function mount(Group $group, User $user)
     {
@@ -31,5 +35,10 @@ class GroupUserLoans extends Component
     public function selected(Loan $loan){
       $this->loan = $loan;
       $this->emit('disburse-selected',$loan);
+    }
+
+    public function remove(Loan $loan){
+        $loan->delete();
+        $this->emit('update');
     }
 }

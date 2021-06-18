@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function (){
     Route::get('/group/{group}/user/{user}/loans', \App\Http\Livewire\Groups\GroupUserLoans::class)->name('group.user.loans');
     Route::get('/user/{user}/show', \App\Http\Livewire\Profile\ProfileEdit::class)->name('user.show');
     Route::get('/user/{user}/documents', \App\Http\Livewire\Profile\ProfileDocuments::class)->name('user.documents');
+    Route::get('/user/{user}/banks', \App\Http\Livewire\Profile\ProfileBank::class)->name('user.banks');
 
 });
 

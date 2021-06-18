@@ -1,5 +1,3 @@
-
-
 <div class="modal-content">
 
     <form wire:submit.prevent="save">
@@ -23,7 +21,7 @@
             @endif
 
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
 
                     <div class="form-group">
                         <label>Amount</label>
@@ -34,23 +32,47 @@
                         @enderror
                     </div>
 
+                </div>
+                <div class="col-lg-6">
                     <div class="form-group">
                         <label>Type</label>
-                        <select class="form-control mr-3" wire:model.defer="disbursement.type_id">
-                            <option value="">--Type--</option>
-                            @foreach($types as $type)
-                                <option value="{{$type->id}}">{{$type->name}}</option>
+                        <select class="form-control mr-3" wire:model="disbursement.bank_id">
+                            <option value="">--Bank--</option>
+                            @foreach($banks as $bank)
+                                <option value="{{$bank->id}}">{{$bank->name}} - {{$bank->account_number}}</option>
                             @endforeach
                         </select>
                     </div>
-
                 </div>
+
+            </div>
+
+            <div class="row">
+                <dt class="col-sm-3">Bank Name</dt>
+                <dd class="col-sm-9">{{$myBank->name ?? '--'}}</dd>
+
+                <dt class="col-sm-3">Account Name</dt>
+                <dd class="col-sm-9">{{$myBank->account_name ?? '--'}}</dd>
+
+                <dt class="col-sm-3">Account Number</dt>
+                <dd class="col-sm-9">{{$myBank->account_number ?? '--'}}</dd>
+
+                <dt class="col-sm-3">Branch Name</dt>
+                <dd class="col-sm-9">{{$myBank->branch ?? '--'}}</dd>
+
+                <dt class="col-sm-3">Branch Number</dt>
+                <dd class="col-sm-9">{{$myBank->branch_code ?? '--'}}</dd>
+
+                <dt class="col-sm-3">Swift Code</dt>
+                <dd class="col-sm-9">{{$myBank->swift_code ?? '--'}}</dd>
             </div>
         </div>
 
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" wire:click="save" wire:loading.attr="disabled" wire:loading.class="spinner spinner-white spinner-right">Save</button>
+            <button type="button" class="btn btn-primary" wire:click="save" wire:loading.attr="disabled"
+                    wire:loading.class="spinner spinner-white spinner-right">Save
+            </button>
         </div>
     </form>
 </div>

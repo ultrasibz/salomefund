@@ -17,7 +17,7 @@ class GroupUserIndex extends Component
 
     public function save()
     {
-            $this->group->users()->attach($this->selecteduser);
+        $this->group->users()->attach($this->selecteduser);
 
 
     }
@@ -28,5 +28,10 @@ class GroupUserIndex extends Component
         $non_members = User::where('is_admin', false)->whereNotIn('id', $users->pluck('id'))->get();
 
         return view('livewire.groups.group-user-index', compact('users', 'non_members'));
+    }
+
+    public function remove(User $user)
+    {
+        $this->group->users()->detach($user->id);
     }
 }

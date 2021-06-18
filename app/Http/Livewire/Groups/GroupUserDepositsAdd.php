@@ -39,5 +39,10 @@ class GroupUserDepositsAdd extends Component
         $this->user->deposits()->save($this->deposit);
 
         $this->deposit->setStatus('approved');
+        $this->emit('update');
+        $this->deposit = new Deposit();
+
     }
+
+
 }

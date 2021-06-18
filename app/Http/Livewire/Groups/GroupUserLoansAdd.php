@@ -38,5 +38,7 @@ class GroupUserLoansAdd extends Component
         $this->loan->group_id = $this->group->id;
         $this->user->loans()->save($this->loan);
         $this->loan->setStatus('approved');
+        $this->emit('update');
+
     }
 }

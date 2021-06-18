@@ -19,6 +19,7 @@
         "qoraiche/laravel-mail-editor": "^3.2",
         "spatie/laravel-medialibrary": "^9.0.0",
         "spatie/laravel-model-status": "^1.10",
+        "spatie/pdf-to-image": "^2.1",
         "willvincent/laravel-rateable": "^2.3"
     },
     "require-dev": {

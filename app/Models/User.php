@@ -18,6 +18,7 @@ use App\Models\Main\UserTypeModel;
 use App\Models\Main\UserUnitModel;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Validator;
@@ -62,10 +63,31 @@ class User extends Authenticatable implements HasMedia
         $this
             ->addMediaCollection('avatar')
             ->singleFile();
+
+        $this
+            ->addMediaCollection('nrc')
+            ->singleFile();
+
         $this->addMediaConversion('small')
             ->width(200)
             ->height(200)
             ->sharpen(10);
+
+        $this->addMediaConversion('thumb')
+            ->width(200)
+            ->height(200)
+            ->pdfPageNumber(1);
+    }
+
+
+    public function getAvatarAttribute()
+    {
+        return $this->getFirstMedia('avatar');
+    }
+
+    public function getNrcDocAttribute()
+    {
+        return $this->getFirstMedia('nrc');
     }
 
     public function getAccountNumberAttribute()
@@ -113,14 +135,13 @@ class User extends Authenticatable implements HasMedia
         return $this->loans()->get()->pluck('net_amount')->sum();
     }
 
-    public function getAvatarAttribute()
-    {
-        return $this->getFirstMedia('avatar');
-    }
-
     public function groups()
     {
         return $this->belongsToMany(Group::class);
+    }
+
+    public function banks(){
+        return $this->hasMany(Bank::class);
     }
 
 

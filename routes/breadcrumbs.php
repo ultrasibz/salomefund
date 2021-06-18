@@ -26,7 +26,7 @@ Breadcrumbs::for('group.user.deposits', function ($trail, \App\Models\Group $gro
 Breadcrumbs::for('group.user.loans', function ($trail, \App\Models\Group $group, \App\Models\User $user) {
     $trail->parent('group.show',$group);
     $trail->push($user->fullname);
-    $trail->push('deposits',route('group.user.loans',compact('group','user')));
+    $trail->push('loans',route('group.user.loans',compact('group','user')));
 });
 
 Breadcrumbs::for('user.show', function ($trail, \App\Models\User $user) {
@@ -34,6 +34,11 @@ Breadcrumbs::for('user.show', function ($trail, \App\Models\User $user) {
 });
 
 Breadcrumbs::for('user.documents', function ($trail, $user) {
-    $trail->push('Title Here', route('user.documents',$user));
+    $trail->parent('user.show',$user);
+    $trail->push('Documents', route('user.documents',$user));
+});
+
+Breadcrumbs::for('user.banks', function ($trail, $user) {
+    $trail->push('Banks', route('user.banks',$user));
 });
 

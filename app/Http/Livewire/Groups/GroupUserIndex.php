@@ -6,10 +6,11 @@ use App\Models\Group;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 
 class GroupUserIndex extends Component
 {
-    use WithFileUploads;
+    use WithPagination;
     protected $paginationTheme = 'bootstrap';
 
     public Group $group;
@@ -22,8 +23,6 @@ class GroupUserIndex extends Component
     public function save()
     {
         $this->group->users()->attach($this->selecteduser);
-
-
     }
 
     public function render()

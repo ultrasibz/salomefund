@@ -39,8 +39,7 @@
                 <thead>
                 <tr>
                     <th>Amount</th>
-                    <th>Interest</th>
-                    <th>Net Amount</th>
+                    <th>Owing</th>
                     <th>Type</th>
                     <th>Status</th>
                     <th>Date Added</th>
@@ -52,19 +51,14 @@
                     <tr>
                         <td>
                              <span class="text-dark-75  d-block font-size-lg">
-                                @money($loan->amount)
+                                @money($loan->net_amount)
                             </span>
                         </td>
 
-                        <td>
-                             <span class="text-dark-75  d-block font-size-lg">
-                                {{$loan->interest}}
-                            </span>
-                        </td>
 
                         <td>
                              <span class="text-dark-75  d-block font-size-lg">
-                                 @money($loan->net_amount)
+                                 @money($loan->net_amount - $loan->repayments->sum->amount ?? 0)
                             </span>
                         </td>
 
@@ -88,8 +82,17 @@
 
 
                         <td class="text-right pr-0">
-                            <button class="btn btn-primary btn-sm"  data-toggle="modal"
-                                    data-target="#disburse-dd" wire:click="selected({{$loan}})">Disburse</button>
+                            @if($loan->status == 'approved')
+                                <button class="btn btn-primary btn-sm" data-toggle="modal"
+                                        data-target="#disburse-dd" wire:click="selected({{$loan}})">Disburse
+                                </button>
+                            @endif
+
+                                @if($loan->status == 'disbursed')
+                                    <button class="btn btn-primary btn-sm" data-toggle="modal"
+                                            data-target="#repayment-add" wire:click="selected({{$loan}})">Make payment
+                                    </button>
+                                @endif
                         </td>
                     </tr>
                 @endforeach
@@ -99,6 +102,13 @@
         <!--end::Table-->
     </div>
     <!--end::Body-->
+</div>
+
+<div class="modal fade" id="repayment-add" data-backdrop="static" tabindex="-1" role="dialog"
+     aria-labelledby="staticBackdrop" aria-hidden="true" xmlns:wire="http://www.w3.org/1999/xhtml">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <livewire:groups.group-user-repayments-add :user="$user"/>
+    </div>
 </div>
 
 <div class="modal fade" id="disburse-dd" data-backdrop="static" tabindex="-1" role="dialog"

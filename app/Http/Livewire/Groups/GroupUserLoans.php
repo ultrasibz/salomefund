@@ -25,16 +25,16 @@ class GroupUserLoans extends Component
 
     public function render()
     {
-        $loans = $this->user->loans()
+        $loans = $this->user->loans()->with('repayments')
             ->where('group_id', $this->group->id)
             ->paginate(15);
-//        dd($deposits);
+//        dd($loans);
         return view('livewire.groups.group-user-loans', compact('loans'));
     }
 
     public function selected(Loan $loan){
       $this->loan = $loan;
-      $this->emit('disburse-selected',$loan);
+      $this->emit('loan-selected',$loan);
     }
 
     public function remove(Loan $loan){

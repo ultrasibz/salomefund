@@ -58,13 +58,13 @@
 
                         <td>
                              <span class="text-dark-75  d-block font-size-lg">
-                                {{$deposit->interest}}
+                                {{$deposit->interest}}%
                             </span>
                         </td>
 
                         <td>
                              <span class="text-dark-75  d-block font-size-lg">
-                                 @money($deposit->net_amount)
+                                 @money($deposit->interest/100*$deposit->amount)
                             </span>
                         </td>
 

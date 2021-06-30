@@ -16,7 +16,7 @@ class Loan extends Model
         'net_amount'
     ];
 
-    protected $with = ['type'];
+    protected $with = ['type','repayments'];
 
     protected $attributes = [
         'interest' => 10,
@@ -28,6 +28,11 @@ class Loan extends Model
         static::addGlobalScope(new LastestScope);
     }
 
+    public function repayments()
+    {
+        return $this->hasMany(Repayment::class);
+    }
+
     public function type()
     {
         return $this->belongsTo(Type::class);
@@ -36,7 +41,7 @@ class Loan extends Model
 
     public function getNetAmountAttribute()
     {
-        return $this->amount + ($this->amount * $this->interest) / 100;
+        return ($this->amount + ($this->amount * $this->interest) / 100);
     }
 
     public function user()

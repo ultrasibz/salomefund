@@ -19,7 +19,7 @@ class GroupUserDisbursementsAdd extends Component
     public User $user;
 
     protected $listeners = [
-        'disburse-selected' => 'disburse_loaded'
+        'load-selected' => 'disburse_loaded'
     ];
 
     protected $rules = [
@@ -48,6 +48,8 @@ class GroupUserDisbursementsAdd extends Component
     public function save()
     {
         $this->validate();
+        $this->disbursement->loan_id = $this->loan->id;
+
         $this->disbursement->save();
         $this->loan->setStatus('disbursed');
         $this->emit('update');
@@ -58,7 +60,6 @@ class GroupUserDisbursementsAdd extends Component
         $this->loan = $loan;
         $this->disbursement = new Disbursement();
         $this->disbursement->amount = $loan->amount;
-        $this->disbursement->load_id = $loan->id;
     }
 
 

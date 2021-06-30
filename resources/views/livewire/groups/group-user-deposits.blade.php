@@ -40,7 +40,7 @@
                 <tr>
                     <th>Amount</th>
                     <th>Interest</th>
-                    <th>Net Amount</th>
+                    <th>Interest Amount</th>
                     <th>Type</th>
                     <th>Status</th>
                     <th>Date Added</th>
@@ -64,7 +64,7 @@
 
                         <td>
                              <span class="text-dark-75  d-block font-size-lg">
-                                 @money($deposit->interest/100*$deposit->amount)
+                                 @money($deposit->interest/100 * $deposit->amount)
                             </span>
                         </td>
 

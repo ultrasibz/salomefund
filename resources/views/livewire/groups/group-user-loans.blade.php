@@ -38,6 +38,7 @@
             <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
                 <thead>
                 <tr>
+                    <th>Requested</th>
                     <th>Amount</th>
                     <th>Owing</th>
                     <th>Type</th>
@@ -49,6 +50,12 @@
                 <tbody>
                 @foreach($loans as $loan)
                     <tr>
+                        <td>
+                             <span class="text-dark-75  d-block font-size-lg">
+                                @money($loan->amount)
+                            </span>
+                        </td>
+
                         <td>
                              <span class="text-dark-75  d-block font-size-lg">
                                 @money($loan->net_amount)

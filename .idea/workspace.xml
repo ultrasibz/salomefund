@@ -10,7 +10,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcef3ab-7599-49d9-abc7-5f2ea8842bb8" name="Default Changelist" comment="v2" />
+    <list default="true" id="0fcef3ab-7599-49d9-abc7-5f2ea8842bb8" name="Default Changelist" comment="v2">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GroupController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/GenericResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/sanctum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/salomefund.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/salomefund.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Deposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,9 +157,6 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-model-status" />
       <path value="$PROJECT_DIR$/vendor/diglactic/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
-      <path value="$PROJECT_DIR$/vendor/laravel/legacy-factories" />
-      <path value="$PROJECT_DIR$/vendor/reecem/mocker" />
-      <path value="$PROJECT_DIR$/vendor/qoraiche/laravel-mail-editor" />
       <path value="$PROJECT_DIR$/vendor/willvincent/laravel-rateable" />
       <path value="$PROJECT_DIR$/vendor/akaunting/laravel-money" />
       <path value="$PROJECT_DIR$/vendor/league/iso3166" />
@@ -159,6 +171,7 @@
       <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
       <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
     </include_path>
   </component>
   <component name="ProjectId" id="1shj8lzeTx4hsYJE26LkQPTutOk" />
@@ -172,17 +185,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\salomefund" />
       <recent name="C:\wamp64\www\salomefund\app\Models" />
       <recent name="C:\wamp64\www\salomefund\resources\views\livewire" />
       <recent name="C:\wamp64\www\salomefund\app\Http\Livewire" />
       <recent name="C:\wamp64\www\salomefund\resources\views" />
-      <recent name="C:\wamp64\www\salomefund\app" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,6 +205,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -221,6 +236,13 @@
       <workItem from="1624003903919" duration="13082000" />
       <workItem from="1624098665832" duration="427000" />
       <workItem from="1625060992789" duration="5816000" />
+      <workItem from="1634049122921" duration="2296000" />
+      <workItem from="1634123238054" duration="4478000" />
+      <workItem from="1634194549070" duration="4689000" />
+      <workItem from="1634282714325" duration="1189000" />
+      <workItem from="1634302863699" duration="1309000" />
+      <workItem from="1634623418532" duration="663000" />
+      <workItem from="1634639119542" duration="5796000" />
     </task>
     <task id="LOCAL-00001" summary="v2">
       <created>1623676027476</created>
@@ -359,7 +381,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -376,64 +398,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v2" />
     <option name="LAST_COMMIT_MESSAGE" value="v2" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="830" y="383" key="#Notifications" timestamp="1623678749368">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="830" y="383" key="#Notifications/-1920.138.1920.1000/0.0.1920.1040@0.0.1920.1040" timestamp="1623678749368" />
-    <state x="707" y="45" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623675372075">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="707" y="45" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.138.1920.1000/0.0.1920.1040@0.0.1920.1040" timestamp="1623675372075" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1625063822123">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.138.1920.1000/0.0.1920.1040@0.0.1920.1040" timestamp="1624013456172" />
-    <state x="552" y="218" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-1920.244.1920.999@0.0.1536.824" timestamp="1622974864489" />
-    <state x="552" y="218" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1622982442666" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.244.1920.999@0.0.1920.1040" timestamp="1625063822123" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621510671748" />
-    <state x="550" y="168" key="FileChooserDialogImpl" timestamp="1622396710573">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="550" y="168" key="FileChooserDialogImpl/0.0.1536.824/-1920.244.1920.999@0.0.1536.824" timestamp="1622396710573" />
-    <state x="648" y="311" key="Github.ShareDialog" timestamp="1621701463382">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="648" y="311" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1621701463382" />
-    <state x="555" y="118" key="Github.UntrackedFilesDialog" timestamp="1621701475028">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="555" y="118" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621701475028" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1621341916227">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621341916227" />
-    <state x="633" y="134" key="RollbackChangesDialog" timestamp="1621702274972">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="633" y="134" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621702274972" />
-    <state x="279" y="58" key="SettingsEditor" timestamp="1621750378856">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1621750378856" />
-    <state x="553" y="253" key="Vcs.Push.Dialog.v2" timestamp="1625066716763">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="553" y="253" key="Vcs.Push.Dialog.v2/-1920.138.1920.1000/0.0.1920.1040@0.0.1920.1040" timestamp="1624019011094" />
-    <state x="553" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.244.1920.999@0.0.1920.1040" timestamp="1625066716763" />
-    <state x="371" y="24" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1621751340023">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="371" y="24" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1621751340023" />
-    <state x="477" y="147" width="582" height="530" key="find.popup" timestamp="1621747753242">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="477" y="147" width="582" height="530" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1621747753242" />
-    <state x="760" y="422" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1623932785422">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="760" y="422" key="git4idea.remote.GitConfigureRemotesDialog/-1920.138.1920.1000/0.0.1920.1040@0.0.1920.1040" timestamp="1623932785422" />
   </component>
 </project>

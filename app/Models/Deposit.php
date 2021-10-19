@@ -19,6 +19,10 @@ class Deposit extends Model implements HasMedia
         'net_amount'
     ];
 
+    protected $casts = [
+        'amount' => 'double'
+    ];
+
     protected $attributes = [
         'interest' => 10,
     ];

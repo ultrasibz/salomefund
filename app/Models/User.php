@@ -22,13 +22,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Sanctum\HasApiTokens;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use willvincent\Rateable\Rateable;
 
 class User extends Authenticatable implements HasMedia
 {
-    use HasFactory, Notifiable, Rateable, InteractsWithMedia;
+    use HasFactory, Notifiable, Rateable, InteractsWithMedia,HasApiTokens;
 
     /**
      * The attributes that are mass assignable.

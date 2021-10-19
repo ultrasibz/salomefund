@@ -119,9 +119,6 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-model-status" />
       <path value="$PROJECT_DIR$/vendor/diglactic/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
-      <path value="$PROJECT_DIR$/vendor/laravel/legacy-factories" />
-      <path value="$PROJECT_DIR$/vendor/reecem/mocker" />
-      <path value="$PROJECT_DIR$/vendor/qoraiche/laravel-mail-editor" />
       <path value="$PROJECT_DIR$/vendor/willvincent/laravel-rateable" />
       <path value="$PROJECT_DIR$/vendor/akaunting/laravel-money" />
       <path value="$PROJECT_DIR$/vendor/league/iso3166" />
@@ -136,6 +133,7 @@
       <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
       <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />

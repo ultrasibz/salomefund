@@ -16,7 +16,7 @@ class Deposit extends Model implements HasMedia
     use HasFactory,HasStatuses, InteractsWithMedia;
 
     protected $appends = [
-        'net_amount'
+        'status'
     ];
 
     protected $casts = [
@@ -44,7 +44,7 @@ class Deposit extends Model implements HasMedia
         return $this->belongsTo(Group::class);
     }
 
-    public function getNetAmountAttribute(){
-        return $this->amount + ($this->amount * $this->interest)/100;
-    }
+//    public function getNetAmountAttribute(){
+//        return $this->amount + ($this->amount * $this->interest)/100;
+//    }
 }

@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\GenericResource;
+use App\Http\Resources\GroupResource;
 use App\Models\Group;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class GroupController extends Controller
@@ -16,7 +18,17 @@ class GroupController extends Controller
      */
     public function index(Request $request)
     {
-        return GenericResource::collection($request->user()->groups()->get());
+        $query = function (Builder $query) use ($request) {
+            $query->where('user_id', $request->user()->id);
+        };
+        $deposits = $request->user()->groups()
+            ->withSum(['deposits as total_deposits' => $query],'amount')
+            ->withSum(['deposits as total_net_deposits' => $query],'net_amount')
+            ->withSum(['loans as total_loans' => $query],'amount')
+            ->withSum(['loans as total_net_loans' => $query],'net_amount')
+//            ->withSum(['loans.disbursements as total_disbursements' => $query],'amount')
+            ->get();
+        return GroupResource::collection($deposits);
     }
 
     /**

@@ -30,6 +30,8 @@ class GroupUserDisbursementsAdd extends Component
     public function mount(User $user)
     {
         $this->user = $user;
+        $this->disbursement = new Disbursement();
+
     }
 
     public function render()

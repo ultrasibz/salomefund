@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use phpDocumentor\Reflection\Types\Resource_;
 
 class UserController extends Controller
 {
@@ -30,7 +32,7 @@ class UserController extends Controller
     }
 
     public function me(Request $request){
-        return $request->user();
+        return new UserResource($request->user());
     }
 
     /**

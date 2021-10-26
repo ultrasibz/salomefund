@@ -13,6 +13,10 @@ class Group extends Model
     use HasFactory,HasStatuses;
 
     protected $appends = ['is_open'];
+    protected $casts = [
+        'total_deposits' => 'double',
+        'total_loans' => 'double',
+    ];
 
     public function getIsOpenAttribute()
     {

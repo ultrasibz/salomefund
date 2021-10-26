@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\GenericResource;
+use App\Http\Resources\GroupResource;
+use App\Http\Resources\LoanResource;
+use App\Models\Group;
 use App\Models\Loan;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class LoanController extends Controller
@@ -13,9 +18,11 @@ class LoanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request, Group $group)
     {
-        //
+//        dd($group->loans()->where('user_id',$request->user()->id)->get());
+        return LoanResource::collection($group->loans()->where('user_id',$request->user()->id)->get());
+
     }
 
     /**

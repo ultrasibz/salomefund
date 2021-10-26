@@ -13,7 +13,12 @@ class Loan extends Model
     use HasFactory, HasStatuses;
 
     protected $appends = [
-        'net_amount'
+        'net_amount',
+        'owing',
+    ];
+
+    protected $casts = [
+        'amount' => 'double'
     ];
 
     protected $with = ['type','repayments'];
@@ -31,6 +36,10 @@ class Loan extends Model
     public function repayments()
     {
         return $this->hasMany(Repayment::class);
+    }
+
+    public function getOwingAttribute(){
+        return $this->net_amount - $this->repayments->sum('amount');
     }
 
     public function type()

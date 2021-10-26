@@ -40,6 +40,8 @@ class User extends Authenticatable implements HasMedia
     protected $guarded = [
     ];
 
+//    protected $appends = ['avatar'];
+
     /**
      * The attributes that should be hidden for arrays.
      *

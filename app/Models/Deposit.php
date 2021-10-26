@@ -16,7 +16,7 @@ class Deposit extends Model implements HasMedia
     use HasFactory,HasStatuses, InteractsWithMedia;
 
     protected $appends = [
-        'status'
+        'status',
     ];
 
     protected $casts = [

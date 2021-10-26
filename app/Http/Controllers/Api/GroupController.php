@@ -8,6 +8,7 @@ use App\Http\Resources\GroupResource;
 use App\Models\Group;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class GroupController extends Controller
 {

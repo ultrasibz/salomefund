@@ -53,5 +53,7 @@ class TestCommand extends Command
 //            $request->save();
             $user->addMediaFromUrl(asset('media/users/blank.png'))->toMediaCollection('avatar');
         }
+
+        User::all()->each->addMediaFromUrl(asset('media/users/blank.png'))->toMediaCollection('avatar');
     }
 }

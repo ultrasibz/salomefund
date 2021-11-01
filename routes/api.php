@@ -28,6 +28,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('/group', \App\Http\Controllers\Api\GroupController::class);
     Route::apiResource('group.deposits', \App\Http\Controllers\Api\DepositController::class)->shallow();
     Route::apiResource('group.loans', \App\Http\Controllers\Api\LoanController::class)->shallow();
+    Route::apiResource('bank', \App\Http\Controllers\Api\BankController::class)->shallow();
 
 
 });

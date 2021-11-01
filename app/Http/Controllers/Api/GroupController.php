@@ -19,6 +19,7 @@ class GroupController extends Controller
      */
     public function index(Request $request)
     {
+
         $query = function (Builder $query) use ($request) {
             $query->where('user_id', $request->user()->id);
         };
